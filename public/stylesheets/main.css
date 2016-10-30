@@ -3,13 +3,13 @@ body {
 }
 
 h1 {
-  color: black;
+  color: navy;
   text-align: center;
 }
 
 p {
   font-family: "Courier New";
-  font-size: 30px;
+  font-size: 25px;
 }
 
 .weather {
