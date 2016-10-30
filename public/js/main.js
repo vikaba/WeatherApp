@@ -2,6 +2,11 @@ $(document).ready(function() {
 	getWeather();
 });
 
+function searchWeather() {
+  var searchQuery = $('.search').val(); 
+  getWeather(searchQuery);
+}
+
 function getWeather(searchQuery){
 	var url = 'http://api.openweathermap.org/data/2.5/weather?units=imperial&id=4930956&APPID=' + apiKey;
 	var params = {
@@ -18,14 +23,9 @@ function getWeather(searchQuery){
 			$('.city').text(data.name);
 			$('.temp').text(data.main.temp + ' F');
 			$('.humidity').text(data.main.humidity);
-			$('.wind')text(data.wind.speed);
+			$('.wind').text(data.wind.speed);
 		}, error: function (error) {
     	$('.error-message').text('An error occurred!');
   }
 });
-
-function searchWeather() {
-  var searchQuery = $('.search').val(); 
-  getWeather(searchQuery);
-}
 }
