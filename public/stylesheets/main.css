@@ -3,11 +3,17 @@ body {
 }
 
 h1 {
-  color: orange;
+  color: black;
   text-align: center;
 }
 
 p {
   font-family: "Courier New";
   font-size: 30px;
+}
+
+.weather {
+	font-family: "Calibri";
+	font-size: 20px;
+	color: orange;
 }
