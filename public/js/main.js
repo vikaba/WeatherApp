@@ -7,8 +7,8 @@ function searchWeather() {
   getWeather(searchQuery);
 }
 
-function getWeather(searchQuery) {
-	var url = 'http://api.openweathermap.org/data/2.5/weather?';
+function getWeather(searchQuery){
+	var url = 'http://api.openweathermap.org/data/2.5/weather?units=imperial&id=4930956&APPID=' + apiKey;
 	var params = {
     APPID: apiKey,
     units: 'imperial'
@@ -18,7 +18,7 @@ function getWeather(searchQuery) {
   } else {
     params.id = 4930956
   }
-	$.ajax(url, + $.param(params), {
+	$.ajax(url, {
 		success: function (data) {
 			$('.city').text(data.name);
 			$('.temp').text(data.main.temp + ' F');
@@ -28,4 +28,6 @@ function getWeather(searchQuery) {
     	$('.error-message').text('An error occurred!');
   }
 });
+
+
 }
