@@ -8,7 +8,7 @@ function searchWeather() {
 }
 
 function getWeather(searchQuery) {
-	var url = 'http://api.openweathermap.org/data/2.5/weather?';
+	var url = 'http://api.openweathermap.org/data/2.5/weather?units=imperial&id=4930956&APPID=' + apiKey;
 	var params = {
     APPID: apiKey,
     units: 'imperial'
