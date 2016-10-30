@@ -22,7 +22,7 @@ function getWeather(searchQuery){
 		success: function (data) {
 			$('.city').text(data.name);
 			$('.temp').text(data.main.temp + ' F');
-			$('.humidity').text(data.main.humidity) + ' %";
+			$('.humidity').text(data.main.humidity) + ' %';
 			$('.wind').text(data.wind.wind.speed) + ' mph';
 		}, error: function (error) {
     	$('.error-message').text('An error occurred!');
